@@ -17,12 +17,47 @@ Tableau en entrée:
   { name: 'Darth Maul', side: 'dark' }
 ]
 
+
 Sortie attendue:
 ['Yoda', 'Obiwan Kenobi', 'Mace Windu']
 
 */
+const sw =
+[
+  { name: 'Yoda', side: 'light' },
+  { name: 'Count Dooku', side: 'dark' },
+  { name: 'Obiwan Kenobi', side: 'light' },
+  { name: 'Mace Windu', side: 'light' },
+  { name: 'Darth Sidious', side: 'dark' },
+  { name: 'Darth Maul', side: 'dark' }
+];
 
-function getJedisNames(characters) {
-}
+
+const getJedisNames = (tab) => tab.filter(jedi => {
+  
+  return jedi.side === 'light';
+})
+  .map(chevalier => {
+
+    return chevalier.name;
+  });
+//console.log(getJedisNames(sw));
 
 module.exports = getJedisNames;
+
+/*
+const people = [
+  { name: "Anthony Young", age: 7 },
+  { name: "Kieran Davis", age: 34 },
+  { name: "James Woods", age: 23 },
+  { name: "Khalil Sexton", age: 16 },
+  { name: "Beckett Turner", age: 42 }
+];
+const adultsNames = people
+  .filter(function(person) {
+    return person.age >= 18;
+  })
+  .map(function(adult) {
+    return adult.name;
+  });
+console.log(adultsNames);*/

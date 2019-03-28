@@ -37,9 +37,21 @@ Exemple d'entrée:
 
 
  */
+const exemple =   [
+  'Mad Max: Fury Road',
+  'Interstellar',
+  'Revenge of the Nerds',
+  'Revenge of the Pink Panther',
+  'Star Wars: Episode I - The Phantom Menace',
+  'Star Wars: Episode II - Attack of the Clones',
+  'Star Wars: Episode III - Revenge of the Sith'
+];
 
-function searchWordFilter(items, search) {
-}
+const searchWordFilter = (tab, zebulon) => tab.filter(item => {
+  return (item.toUpperCase().indexOf(zebulon.toUpperCase())) !== -1;
+});
+
+console.log(searchWordFilter(exemple, 'revenge'));
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

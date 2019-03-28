@@ -42,10 +42,32 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
+const foods =
+  [
+    {
+      food: 'Bacon',
+      isVegetarian: false
+    },
+    {
+      food: 'Sausage',
+      isVegetarian: false
+    },
+    {
+      food: 'Tofu',
+      isVegetarian: true
+    },
+    {
+      food: 'Chick Pea',
+      isVegetarian: true
+    }
+  ];
+
+const getFoodCategories = (tab) => tab.map(item => {
+  
+  return (`${item.food} ${(item.isVegetarian ? "is suitable" : "is not suitable")} for vegetarians`);
 }
-
-
+);
+//console.log(getFoodCategories(foods));
 
 // Ne pas modifier l'export
 module.exports = getFoodCategories;

@@ -20,9 +20,22 @@ En sortie: [
 ]
 
  */
+const food =
+[
+  'Chicken',
+  'Bacon',
+  'Tofu',
+  'Mayonnaise'
+];
 
-function getStringsLength(strings) {
-}
+const getStringsLength = (tab) => tab.map(item => {
+return (`${item} contains ${item.length} characters`);
+
+});
+//const result = getStringsLength(food);
+//console.log(result);
+
+console.log(getStringsLength(food));
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

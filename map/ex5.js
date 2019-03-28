@@ -11,8 +11,12 @@ Exemple de tableau d'entrée:
 Tableau renvoyé par multiplyOddIndices:
   [3, 8, 11, 39, 19, 35]
 */
+const exemple = [3, 8, 11, 13, 19, 7];
+const multiplyOddIndices= (tab) => tab.map(function(item, index) {
 
-function multiplyOddIndices(numbers) {
-}
+ return (index % 2 === 0) ? item : (item * index);
 
+});
+
+//console.log(multiplyOddIndices(exemple));
 module.exports = multiplyOddIndices;
